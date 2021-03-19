@@ -1,0 +1,6 @@
+[submodule "sub-modules/jwt-authentication-lib"]
+	path = sub-modules/jwt-authentication-lib
+	url = https://github.com/yanshibainu/jwt-authentication-lib
+[submodule "sub-modules/utils-lib"]
+	path = sub-modules/utils-lib
+	url = https://github.com/yanshibainu/utils-lib
