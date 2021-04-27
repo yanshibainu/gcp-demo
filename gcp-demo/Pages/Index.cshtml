@@ -175,66 +175,86 @@
                             </tr>
                         </thead>
                         <tbody>
+                        
+                        @foreach(var item in Model.List)
+                        {
                             <tr>
-                                <td>103119445</td>
-                                <td>流體驅動系統及用於該系統的馬達及泵浦</td>
+                                <td>@item.CaseId</td>
+                                <td>@item.Name</td>
                                 <td class="text-right">
-                                    <a href="https://storage.googleapis.com/moeaipo-testfile/110%E5%B9%B42%E6%9C%88%E8%8B%97%E6%A0%97%E7%B8%A3%E8%97%A5%E7%89%A9%E6%AA%A2%E6%9F%A5%E6%9A%A8%E6%9F%A5%E7%8D%B2%E9%81%95%E6%B3%95%E7%B5%B1%E8%A8%88.pdf">110年2月苗栗縣藥物檢查暨查獲違法統計.pdf</a>
+
+                                    <a title="PDF" href="@item.Url" target="_blank"><img title="PDF" src="~/images/icon/b-Pdf.gif" alt="PDF" style="border-width: 0px;"></a>
+                                    @*<a href="https://storage.googleapis.com/moeaipo-testfile/110%E5%B9%B42%E6%9C%88%E8%8B%97%E6%A0%97%E7%B8%A3%E8%97%A5%E7%89%A9%E6%AA%A2%E6%9F%A5%E6%9A%A8%E6%9F%A5%E7%8D%B2%E9%81%95%E6%B3%95%E7%B5%B1%E8%A8%88.pdf">110年2月苗栗縣藥物檢查暨查獲違法統計.pdf</a>*@
                                 </td>
                             </tr>
-                            <tr>
-                                <td>103129172</td>
-                                <td>基板搬運裝置</td>
-                                <td class="text-right">
-                                    <a href="https://storage.googleapis.com/moeaipo-testfile/LandZone.ZIP">LandZone.ZIP</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>103133094</td>
-                                <td>固體攝像元件、其製造方法及電子機器</td>
-                                <td class="text-right">
-                                    <a href="https://storage.googleapis.com/moeaipo-testfile/cgaamnew11001.zip">cgaamnew11001.zip</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>103136508</td>
-                                <td>用於電子元件製造的萬用構件抬升裝置、組件及方法</td>
-                                <td class="text-right">
-                                    <a href="https://storage.googleapis.com/moeaipo-testfile/%E5%90%88%E4%BD%9C%E4%B9%8B%E7%94%A2%E9%9A%AA%E5%85%AC%E5%8F%B8.csv">合作之產險公司.csv</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>103136740</td>
-                                <td>貼設式單側導熱均溫器</td>
-                                <td class="text-right">
-                                    <a href="https://storage.googleapis.com/moeaipo-testfile/%E8%A1%8C%E8%BB%8A%E6%88%90%E6%9C%AC%E8%B3%87%E6%96%99%E5%BA%AB.zip">行車成本資料庫.zip</a>
-                                </td>
-                            </tr>
-                            <!--<tr>
-                                <td>2018-09-29 05:57</td>
-                                <td>100392</td>
-                                <td>Smartwatch 4.0 LTE Wifi</td>-->
-                            @*<td class="text-right">$199.00</td>
+                        }
+
+                        <!--<tr>
+                            <td>103119445</td>
+                            <td>流體驅動系統及用於該系統的馬達及泵浦</td>
+                            <td class="text-right">
+
+                                <a title="PDF" href="https://storage.googleapis.com/moeaipo-testfile/110%E5%B9%B42%E6%9C%88%E8%8B%97%E6%A0%97%E7%B8%A3%E8%97%A5%E7%89%A9%E6%AA%A2%E6%9F%A5%E6%9A%A8%E6%9F%A5%E7%8D%B2%E9%81%95%E6%B3%95%E7%B5%B1%E8%A8%88.pdf" target="_blank"><img title="PDF" src="~/images/icon/b-Pdf.gif" alt="PDF" style="border-width: 0px;"></a>-->
+                                @*<a href="https://storage.googleapis.com/moeaipo-testfile/110%E5%B9%B42%E6%9C%88%E8%8B%97%E6%A0%97%E7%B8%A3%E8%97%A5%E7%89%A9%E6%AA%A2%E6%9F%A5%E6%9A%A8%E6%9F%A5%E7%8D%B2%E9%81%95%E6%B3%95%E7%B5%B1%E8%A8%88.pdf">110年2月苗栗縣藥物檢查暨查獲違法統計.pdf</a>*@
+                            <!--</td>
+                        </tr>
+                        <tr>
+                            <td>103129172</td>
+                            <td>基板搬運裝置</td>
+                            <td class="text-right">
+                                <a title="PDF" href="https://storage.googleapis.com/moeaipo-testfile/LandZone.ZIP" target="_blank"><img title="PDF" src="~/images/icon/b-Pdf.gif" alt="PDF" style="border-width: 0px;"></a>-->
+                                @*<a href="https://storage.googleapis.com/moeaipo-testfile/LandZone.ZIP">LandZone.ZIP</a>*@
+                            <!--</td>
+                        </tr>
+                        <tr>
+                            <td>103133094</td>
+                            <td>固體攝像元件、其製造方法及電子機器</td>
+                            <td class="text-right">
+                                <a title="PDF" href="https://storage.googleapis.com/moeaipo-testfile/cgaamnew11001.zip" target="_blank"><img title="PDF" src="~/images/icon/b-Pdf.gif" alt="PDF" style="border-width: 0px;"></a>-->
+                                @*<a href="https://storage.googleapis.com/moeaipo-testfile/cgaamnew11001.zip">cgaamnew11001.zip</a>*@
+                            <!--</td>
+                        </tr>
+                        <tr>
+                            <td>103136508</td>
+                            <td>用於電子元件製造的萬用構件抬升裝置、組件及方法</td>
+                            <td class="text-right">
+                                <a title="PDF" href="https://storage.googleapis.com/moeaipo-testfile/%E5%90%88%E4%BD%9C%E4%B9%8B%E7%94%A2%E9%9A%AA%E5%85%AC%E5%8F%B8.csv" target="_blank"><img title="PDF" src="~/images/icon/b-Pdf.gif" alt="PDF" style="border-width: 0px;"></a>-->
+                                @*<a href="https://storage.googleapis.com/moeaipo-testfile/%E5%90%88%E4%BD%9C%E4%B9%8B%E7%94%A2%E9%9A%AA%E5%85%AC%E5%8F%B8.csv">合作之產險公司.csv</a>*@
+                            <!--</td>
+                        </tr>
+                        <tr>
+                            <td>103136740</td>
+                            <td>貼設式單側導熱均溫器</td>
+                            <td class="text-right">
+                                <a title="PDF" href="https://storage.googleapis.com/moeaipo-testfile/%E8%A1%8C%E8%BB%8A%E6%88%90%E6%9C%AC%E8%B3%87%E6%96%99%E5%BA%AB.zip" target="_blank"><img title="PDF" src="~/images/icon/b-Pdf.gif" alt="PDF" style="border-width: 0px;"></a>-->
+                                @*<a href="https://storage.googleapis.com/moeaipo-testfile/%E8%A1%8C%E8%BB%8A%E6%88%90%E6%9C%AC%E8%B3%87%E6%96%99%E5%BA%AB.zip">行車成本資料庫.zip</a>*@
+                            <!--</td>
+                        </tr>-->
+                        <!--<tr>
+                        <td>2018-09-29 05:57</td>
+                        <td>100392</td>
+                        <td>Smartwatch 4.0 LTE Wifi</td>-->
+                        @*<td class="text-right">$199.00</td>
                                 <td class="text-right">6</td>*@
-                            <!--<td class="text-right">$1494.00</td>
-                            </tr>
-                            <tr>
-                                <td>2018-09-24 19:10</td>
-                                <td>100391</td>
-                                <td>Camera C430W 4k</td>-->
-                            @*<td class="text-right">$699.00</td>
+                        <!--<td class="text-right">$1494.00</td>
+                        </tr>
+                        <tr>
+                        <td>2018-09-24 19:10</td>
+                        <td>100391</td>
+                        <td>Camera C430W 4k</td>-->
+                        @*<td class="text-right">$699.00</td>
                                 <td class="text-right">1</td>*@
-                            <!--<td class="text-right">$699.00</td>
-                            </tr>
-                            <tr>
-                                <td>2018-09-22 00:43</td>
-                                <td>100393</td>
-                                <td>USB 3.0 Cable</td>
-                                <td>USB 3.0 Cable</td>-->
-                            @*<td class="text-right">$10.00</td>
+                        <!--<td class="text-right">$699.00</td>
+                        </tr>
+                        <tr>
+                        <td>2018-09-22 00:43</td>
+                        <td>100393</td>
+                        <td>USB 3.0 Cable</td>
+                        <td>USB 3.0 Cable</td>-->
+                        @*<td class="text-right">$10.00</td>
                                 <td class="text-right">3</td>*@
-                            <!--<td class="text-right">$30.00</td>
-                            </tr>-->
+                        <!--<td class="text-right">$30.00</td>
+                        </tr>-->
                         </tbody>
                     </table>
                 </div>

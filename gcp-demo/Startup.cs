@@ -7,7 +7,10 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
+using AcctReview;
+using Microsoft.EntityFrameworkCore;
 
 namespace gcp_demo
 {
@@ -24,6 +27,16 @@ namespace gcp_demo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            var connectionString = DesHelper.Decrypt(Configuration.GetConnectionString("Database"));
+            // configure DbContext
+            services.AddDbContext<DemoDbContext>(options =>
+                options.UseMySQL(connectionString));
+
+            //options.UseMySql(Configuration.GetConnectionString("MvcMovieContext"), mysqlOptions =>
+            //{
+            //    mysqlOptions.ServerVersion(new Version(8, 0, 21), ServerType.MySql);
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
