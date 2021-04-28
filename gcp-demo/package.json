@@ -3,6 +3,8 @@
   "name": "gcpdemo",
   "devDependencies": {},
   "scripts": {
-    "docker:run": "docker run -p 80:5000 -e ASPNETCORE_URLS=http://+:5000 -e ASPNETCORE_ENVIRONMENT=Production --name gcp-demo yanshibainu/gcp-demo"
+    "docker:run:production": "docker run -p 80:5000 -e ASPNETCORE_URLS=http://+:5000 -e ASPNETCORE_ENVIRONMENT=Production --name gcp-demo --restart=always yanshibainu/gcp-demo",
+    "docker:run:premise": "docker run -p 80:5000 -e ASPNETCORE_URLS=http://+:5000 -e ASPNETCORE_ENVIRONMENT=Premise --name gcp-demo --restart=always yanshibainu/gcp-demo",
+    "docker:run:cloud": "docker run -p 80:5000 -e ASPNETCORE_URLS=http://+:5000 -e ASPNETCORE_ENVIRONMENT=Cloud --name gcp-demo --restart=always yanshibainu/gcp-demo"
   }
 }
